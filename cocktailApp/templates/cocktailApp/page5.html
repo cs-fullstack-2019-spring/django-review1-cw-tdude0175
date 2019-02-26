@@ -12,10 +12,11 @@ page5
 {% block content %}
 {{lastpage}}
 {% endblock content %}
+{% block links %}
 <br>
 <a href="{% url 'home' 'page5' %}">Home</a>
 <a href="{% url 'page2' 'page5' %}">page: 2</a>
 <a href="{% url 'page3' 'page5' %}">page: 3</a>
 <a href="{% url 'page4' 'page5' %}">page: 4</a>
 <a href="{% url 'page5' 'page5' %}">page: 5</a>
-
+{% endblock links %}

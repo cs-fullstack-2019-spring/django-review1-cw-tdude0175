@@ -18,7 +18,19 @@ def details(request, cocktailID):
         }
 
     return render(request, 'cocktailApp/details.html',content)
+
+
 # this is work for exercise 1
+
+pageIndex =\
+    [
+        {'pageID':1},
+        {'pageID':2},
+        {'pageID':3},
+        {'pageID':4},
+        {'pageId':5},
+    ]
+
 def home(request, lastpage):
     content =\
         {
@@ -29,8 +41,10 @@ def home(request, lastpage):
 def page2(request , lastpage):
     content =\
         {
-            'lastpage': lastpage
+            'lastpage': lastpage,
+            'page': "page2"
         }
+    print(lastpage)
     return render(request, 'cocktailApp/page2.html', content )
 
 def page3(request , lastpage):
