@@ -2,7 +2,7 @@ from django.shortcuts import render , get_object_or_404
 from django.http import HttpResponse
 from .models import Cocktail
 # Create your views here.
-
+# this completes requirements for exercise two
 def index(request):
     drinks = Cocktail.objects.all()
     content = \
@@ -18,7 +18,7 @@ def details(request, cocktailID):
         }
 
     return render(request, 'cocktailApp/details.html',content)
-
+# this is work for exercise 1
 def home(request, lastpage):
     content =\
         {
