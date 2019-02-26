@@ -1,0 +1,12 @@
+(% extends 'cocktailApp/index.html' %}
+
+{% block return %}
+<a href="{% url 'index' %}">go back</a>
+
+{% endblock return %}
+
+{% block content %}
+{{drink.name}}
+{{drink.alcoholPercent}}
+{{drink.servingGlass}}
+{% endblock content %}

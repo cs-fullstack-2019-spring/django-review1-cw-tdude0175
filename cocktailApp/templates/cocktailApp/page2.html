@@ -1,0 +1,23 @@
+{% extends 'cocktailApp/Home.html' %}
+
+{% block title %}
+page2
+{% endblock title %}
+
+{% block header%}
+page2
+{% endblock header %}
+
+
+{% block content %}
+{{lastpage}}
+{% endblock content %}
+<br>
+
+<a href="{% url 'home' 'page2'  %}">Home</a>
+<a href="{% url 'page2' 'page2' %}">page: 2</a>
+<a href="{% url 'page3' 'page2' %}">page: 3</a>
+<a href="{% url 'page4' 'page2' %}">page: 4</a>
+<a href="{% url 'page5' 'page2' %}">page: 5</a>
+
+

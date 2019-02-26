@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Drinks</h1>
+{% block return %}
+
+{% endblock return %}
+
+<table>
+{% block content %}
+    {%for Drink in drinks %}
+    <tr>
+        <td><a href="{% url 'details' Drink.id %}">{{Drink.name}}</a></td>
+    </tr>
+    {% endfor %}
+
+{% endblock content %}
+</table>
+</body>
+</html>
